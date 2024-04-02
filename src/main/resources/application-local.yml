@@ -1,0 +1,32 @@
+spring-batch-db:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/spring-batch?createDatabaseIfNotExist=true
+    password: admin
+    username: root
+
+coleta-principal-db:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/dbColetaPrincipal?createDatabaseIfNotExist=true
+    password: admin
+    username: root
+
+iirgd-db:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/dbIIRGD
+    password: admin
+    username: root
+
+logging:
+  level:
+    org.springframework.batch: info
+    org.springframework.batch.repeat: info
+    com.zaxxer.hikari: info
+    org.springframework.jdbc: info
+    org.springframework.transaction: info
+    org.springframework.data.transaction: info
+
+
+defaultTenant: banco1
